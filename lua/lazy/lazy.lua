@@ -8,6 +8,4 @@ end
 
 vim.opt.rtp:prepend(lazyPath)
 
-require("lazy").setup({
-	
-})
+require("lazy").setup({ {import = "plugins"} })
