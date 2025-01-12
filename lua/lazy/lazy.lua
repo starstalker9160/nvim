@@ -1,4 +1,4 @@
-local lazyPath = vim.fn.stdpath("data") .. "lazy/lazy.nvim"
+local lazyPath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 
 if not vim.loop.fs_stat(lazyPath) then
 	vim.fn.system({
@@ -8,4 +8,13 @@ end
 
 vim.opt.rtp:prepend(lazyPath)
 
-require("lazy").setup({ {import = "plugins"} })
+require("lazy").setup({
+	{import = "plugins"},
+    {
+      dir = "~/.config/nvim/lua/core",  -- Load a local directory as a plugin
+      name = "core-colours",           -- Provide a unique name for the plugin
+      config = function()
+          require("core.colours").setup()
+      end,
+    },
+})
