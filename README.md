@@ -1,6 +1,10 @@
 # nvim
 
-my personal (base) neovim config
+<h1 align="center">
+  <br>
+  <a><img src="https://starstalker9160.github.io/Assets/Blogs/nvim-hero.png" alt="hero image" width=600></a>
+</h1>
+
 
 ## Installation
 
