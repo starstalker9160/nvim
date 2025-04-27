@@ -1,10 +1,10 @@
 # nvim
 
 <h1 align="center">
-  <br>
-  <a><img src="https://starstalker9160.github.io/Assets/Blogs/nvim-hero.png" alt="hero image" width=600></a>
+  <img src="https://starstalker9160.github.io/Assets/Blogs/nvim-hero.png" alt="hero image">
 </h1>
 
+Read more about it [here](https://starstalker9160.github.io/shelf/nvim)
 
 ## Installation
 
