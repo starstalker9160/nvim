@@ -8,13 +8,16 @@ end
 
 vim.opt.rtp:prepend(lazyPath)
 
-require("lazy").setup({
-	{import = "plugins"},
-    {
-      dir = "~/.config/nvim/lua/core",  -- Load a local directory as a plugin
-      name = "core-colours",           -- Provide a unique name for the plugin
-      config = function()
-          require("core.colours").setup()
-      end,
-    },
-})
+require("lazy").setup(
+	{
+		{ import = "plugins" },
+		{ import = "plugins.lsp" }
+	},
+	{
+		checker = {
+			enabled = true,
+			notify = false
+		},
+		change_detection = { notify = false }
+	}
+)
