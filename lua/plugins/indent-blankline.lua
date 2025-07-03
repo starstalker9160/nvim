@@ -1,10 +1,8 @@
 return {
-	"akinsho/bufferline.nvim",
-	dependencies = { "nvim-tree/nvim-web-devicons" },
-	version = "*",
+	"lukas-reineke/indent-blankline.nvim",
+	event = { "BufReadPre", "BufNewFile" },
+	main = "ibl",
 	opts = {
-		options = {
-			mode = "tabs",
-		}
+		indent = { char = "┊" },
 	}
 }
