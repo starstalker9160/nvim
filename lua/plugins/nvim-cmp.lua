@@ -11,7 +11,7 @@ return {
 		},
 		"saadparwaiz1/cmp_luasnip",
 		"rafamadriz/friendly-snippets",
-		"onsails/lspkind.nvim",
+		"onsails/lspkind.nvim"
     },
    
 	config = function()
@@ -23,12 +23,12 @@ return {
 
 		cmp.setup({
 			completion = {
-				completeopt = "menu,menuone,preview,noselect",
+				completeopt = "menu,menuone,preview,noselect"
 			},
 			snippet = {
 				expand = function(args)
 				luasnip.lsp_expand(args.body)
-				end,
+				end
 			},
 			mapping = cmp.mapping.preset.insert({
 				["<C-k>"] = cmp.mapping.select_prev_item(),
@@ -37,18 +37,18 @@ return {
 				["<C-f>"] = cmp.mapping.scroll_docs(4),
 				["<C-Space>"] = cmp.mapping.complete(),
 				["<C-e>"] = cmp.mapping.abort(),
-				["<CR>"] = cmp.mapping.confirm({ select = false }),
+				["<CR>"] = cmp.mapping.confirm({ select = false })
 			}),
 			sources = cmp.config.sources({
 				{ name = "nvim_lsp"},
 				{ name = "luasnip" },
 				{ name = "buffer" },
-				{ name = "path" },
+				{ name = "path" }
 			}),
 			formatting = {
 				format = lspkind.cmp_format({
 					maxwidth = 50,
-					ellipsis_char = "...",
+					ellipsis_char = "..."
 				})
 			}
     	})
