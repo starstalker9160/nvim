@@ -3,7 +3,8 @@ return {
 	lazy = false,
 	opts = {
 		ensure_installed = {
-			"clangd"
+			"clangd",
+			"bash-language-server"
 		}
 	}
 }
