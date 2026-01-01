@@ -9,7 +9,7 @@
 1. Have nvim installed [(duh)](https://github.com/neovim/neovim#install-from-package)
 2. Bakcup your current config
 ```bash
-mv ~/.config/nvim ~/.config/nvim.bak
+mv ~/.config/nvim ~/.config/nvim.bak/
 ```
 3. Clone this repository
 ```bash
