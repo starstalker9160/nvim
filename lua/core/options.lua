@@ -1,27 +1,36 @@
 vim.cmd("let g:netrw_liststyle = 3")
 
-local opt = vim.opt
+-- encoding
+vim.opt.encoding = "utf-8"
 
--- tabs and indentation
-opt.relativenumber = true
-opt.shiftwidth = 4
-opt.autoindent = true
-opt.tabstop = 4
+-- line numbers
+vim.opt.nu = true
+vim.opt.relativenumber = true
 
-opt.wrap = false
+-- indenting
+vim.opt.shiftwidth = 4
+vim.opt.autoindent = true
+vim.opt.tabstop = 4
+
+-- text wrap (or rather, the lack there of)
+vim.opt.wrap = false
 
 -- search settings
-opt.ignorecase = true
-opt.smartcase = true
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
 
-opt.cursorline = true
+vim.opt.cursorline = true
 
-opt.termguicolors = true
+vim.opt.termguicolors = true
 
-opt.clipboard:append("unnamedplus")
+vim.opt.clipboard:append("unnamedplus")
 
 -- splitting
-opt.splitright = true
-opt.splitbelow = true
+vim.opt.splitright = true
+vim.opt.splitbelow = true
 
-opt.swapfile = false
+vim.opt.swapfile = false
+
+-- scrolling
+vim.opt.scrolloff = 8
+vim.opt.sidescrolloff = 8
