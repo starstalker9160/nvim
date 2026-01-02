@@ -7,7 +7,7 @@
 ## Installation
 
 1. Have nvim installed [(duh)](https://github.com/neovim/neovim#install-from-package)
-2. Bakcup your current config
+2. Backup your current config
 ```bash
 mv ~/.config/nvim ~/.config/nvim.bak/
 ```
