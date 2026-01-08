@@ -4,7 +4,8 @@ return {
 	opts = {
 		ensure_installed = {
 			"clangd",
-			"bash-language-server"
+			"bash-language-server",
+			"pyright"
 		}
 	}
 }
