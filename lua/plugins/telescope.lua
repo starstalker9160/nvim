@@ -32,7 +32,7 @@ return {
 		keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<cr>", { desc = "Find string in cwd" })
 		keymap.set("n", "<leader>fc", "<cmd>Telescope grep_string<cr>", { desc = "Find string under cursor in cwd" })
 
-		keymap.set("n", "<leader>fn", "<cmd>Telescope find_files search_dirs={\"/home/user/notes\"}<cr>")
-		keymap.set("n", "<leader>fz", "<cmd>Telescope live_grep search_dirs={\"/home/user/notes\"}<cr>")
+		keymap.set("n", "<leader>fn", "<cmd>Telescope find_files search_dirs={\"/home/user/notes\"}<cr>", { desc = "Fuzzy find files in notes" })
+		keymap.set("n", "<leader>fz", "<cmd>Telescope live_grep search_dirs={\"/home/user/notes\"}<cr>", { desc = "Fuzzy find string in notes" })
 	end,
 }
