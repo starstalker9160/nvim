@@ -43,6 +43,6 @@ return {
 	},
 	ui = {
 		checkboxes = { },
-		bullets = {  },
+		bullets = { },
 	},
 }
