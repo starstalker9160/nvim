@@ -19,7 +19,7 @@ return {
 					}
 				},
 			},
-			notes_subdir = "inbox",
+			notes_subdir = "notes/inbox",
 			disable_frontmatter = false,
 			note_frontmatter_func = function(note)
 				return nil

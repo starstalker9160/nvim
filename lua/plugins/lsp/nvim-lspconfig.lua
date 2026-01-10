@@ -5,7 +5,9 @@ return {
 		"hrsh7th/cmp-nvim-lsp",
 		{ "antosha417/nvim-lsp-file-operations", config = true },
 		{ "folke/neodev.nvim", opts = {} },
+		'j-hui/fidget.nvim',
 	},
+
 	config = function()
 		local lspconfig = require("lspconfig")
 		local mason_lspconfig = require("mason-lspconfig")
@@ -57,8 +59,8 @@ return {
 
 				opts.desc = "Restart LSP"
 				keymap.set("n", "<leader>rs", ":LspRestart<CR>", opts)
-		end,
-	})
+			end,
+		})
 
 	local capabilities = cmp_nvim_lsp.default_capabilities()
 
@@ -68,44 +70,11 @@ return {
 		vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
 	end
 
-	mason_lspconfig.setup({handlers = {
-		function(server_name)
-			lspconfig[server_name].setup({
-				capabilities = capabilities,
-			})
-		end,
-		["pyright"] = function()
-			local function find_venv_python()
-				local root = vim.lsp.util.root_pattern( "pyproject.toml", "setup.py", "setup.cfg", "requirements.txt" )(vim.fn.getcwd()) or vim.fn.getcwd()
-				local candidates = {
-					".venv",
-					"venv",
-					"env",
-					".env",
-				}
-
-				for _, name in ipairs(candidates) do
-					local python_path = root .. "/" .. name .. "/bin/python"
-					if vim.fn.executable(python_path) == 1 then
-						return python_path
-					end
-				end
-
-				return vim.fn.expand("~/.venv/bin/python")
-			end
-
-			local python_exe = find_venv_python()
-
-			lspconfig.pyright.setup({
-				capabilities = capabilities,
-				settings = {
-					python = {
-						defaultInterpreterPath = python_exe,
-					},
-				},
-			})
-		end,
-
-	}})
+	mason_lspconfig.setup({
+		ensure_installed = {
+			"clangd",
+			"pyright"
+		},
+	})
 	end,
 }
