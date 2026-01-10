@@ -15,7 +15,7 @@ return {
 		},
 	},
 	notes_subdir = "inbox",
-	disable_frontmatter = false,
+	disable_frontmatter = true,
 	templates = {
 		subdir = "templates",
 		date_format = "%Y-%m-%d",
