@@ -76,7 +76,7 @@ return {
 		end,
 		["pyright"] = function()
 			local function find_venv_python()
-				local root = local root = vim.lsp.util.root_pattern( "pyproject.toml", "setup.py", "setup.cfg", "requirements.txt" )(vim.fn.getcwd()) or vim.fn.getcwd()
+				local root = vim.lsp.util.root_pattern( "pyproject.toml", "setup.py", "setup.cfg", "requirements.txt" )(vim.fn.getcwd()) or vim.fn.getcwd()
 				local candidates = {
 					".venv",
 					"venv",

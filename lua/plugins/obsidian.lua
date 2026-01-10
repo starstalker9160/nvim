@@ -6,43 +6,50 @@ return {
 	dependencies = {
 		"nvim-lua/plenary.nvim",
 	},
-	opts = {
-		workspaces = {
-			{
-				name = "notes",
-				path = "~/notes",
+	config = function()
+		local obsidian = require("obsidian")
+		
+		obsidian.setup({
+			workspaces = {
+				{
+					name = "notes",
+					path = "~/notes",
+				},
 			},
-		},
-	},
-	notes_subdir = "inbox",
-	disable_frontmatter = true,
-	templates = {
-		subdir = "templates",
-		date_format = "%Y-%m-%d",
-		time_format = "%H:%M:%S",
-	},
-	mappings = {
-		-- overrides the 'gf' mapping to work on markdown/wiki links within your vault
-		["gf"] = {
-			action = function()
-				return require("obsidian").util.gf_passthrough()
+			notes_subdir = "inbox",
+			disable_frontmatter = false,
+			note_frontmatter_func = function(note)
+				return nil
 			end,
-			opts = { noremap = false, expr = true, buffer = true },
-		},
-		-- toggle check-boxes
-		["<leader>ti"] = {
-			action = function()
-				return require("obsidian").util.toggle_checkbox()
-			end,
-			opts = { buffer = true },
-		},
-	},
-	completion = {
-		nvim_cmp = true,
-		min_chars = 2,
-	},
-	ui = {
-		checkboxes = { },
-		bullets = { },
-	},
+			templates = {
+				subdir = "templates",
+				date_format = "%Y-%m-%d",
+				time_format = "%H:%M:%S",
+			},
+			mappings = {
+				-- overrides the 'gf' mapping to work on markdown/wiki links within your vault
+				["gf"] = {
+					action = function()
+						return require("obsidian").util.gf_passthrough()
+					end,
+					opts = { noremap = false, expr = true, buffer = true },
+				},
+				-- toggle check-boxes
+				["<leader>ti"] = {
+					action = function()
+						return require("obsidian").util.toggle_checkbox()
+					end,
+					opts = { buffer = true },
+				},
+			},
+			completion = {
+				nvim_cmp = true,
+				min_chars = 2,
+			},
+			ui = {
+				checkboxes = { },
+				bullets = { },
+			},
+		})
+	end
 }

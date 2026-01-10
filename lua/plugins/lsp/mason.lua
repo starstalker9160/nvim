@@ -20,7 +20,6 @@ return {
 		mason_lspconfig.setup({
 			ensure_installed = {
 				"clangd",
-				"bash-language-server",
 				"pyright"
 			},
 		})
