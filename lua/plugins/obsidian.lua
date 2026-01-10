@@ -14,6 +14,9 @@ return {
 				{
 					name = "notes",
 					path = "~/notes",
+					overrides = {
+						disable_frontmatter = true,
+					}
 				},
 			},
 			notes_subdir = "inbox",
