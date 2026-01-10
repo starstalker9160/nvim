@@ -35,17 +35,17 @@ vim.opt.swapfile = false
 vim.opt.scrolloff = 8
 vim.opt.sidescrolloff = 8
 
--- spell checker for certain file types
-vim.api.nvim_create_autocmd(
-	"FileType",
-	{
-		pattern = { "markdown", "txt" },
-		callback = function()
-			local cmp = require("cmp")
-			cmp.setup.buffer({ enabled = false })
-			-- have to "re-enable" spellchecking for these fiels
-			vim.opt.spelllang = "eng_us"
-			vim.opt.spell = true
-		end
-	}
-)
+-- -- spell checker for certain file types
+-- vim.api.nvim_create_autocmd(
+-- 	"FileType",
+-- 	{
+-- 		pattern = { "markdown", "txt" },
+-- 		callback = function()
+-- 			local cmp = require("cmp")
+-- 			cmp.setup.buffer({ enabled = false })
+-- 			-- have to "re-enable" spellchecking for these fiels
+-- 			vim.opt.spelllang = "eng_us"
+-- 			vim.opt.spell = true
+-- 		end
+-- 	}
+-- )
