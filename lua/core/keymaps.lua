@@ -11,6 +11,7 @@ vim.keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights
 vim.keymap.set({"n", "v"}, "<leader>y", [["+y]], { desc = "Yank into clipboard" })
 
 -- exiting neovim
+vim.keymap.set("n", "<leader>qc", ":q<CR>", { desc = "Quit current pane" })
 vim.keymap.set("n", "<leader>qa", ":qa<CR>", { desc = "Quit nvim (close all panes)" })
 vim.keymap.set("n", "<leader>qw", ":wq<CR>", { desc = "Write and quit" })
 vim.keymap.set("n", "<leader>qq", ":q!<CR>", { desc = "Exit without saving (get me out of here)" })
