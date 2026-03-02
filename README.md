@@ -16,4 +16,8 @@ mv ~/.config/nvim ~/.config/nvim.bak/
 cd ~/.config/
 git clone https://github.com/starstalker9160/nvim
 ```
-4. Launch nvim
+4. Clear the neovim local folder
+```bash
+rm -rf ~/.local/share/nvim/
+```
+5. Launch nvim

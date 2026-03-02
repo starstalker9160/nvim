@@ -18,7 +18,7 @@ vim.keymap.set("n", "<leader>qq", ":q!<CR>", { desc = "Exit without saving (get 
 
 -- split windows stuff
 vim.keymap.set("n", "<leader>sv", "<C-w>v", { desc = "Split vertically" })
-vim.keymap.set("n", "<leader>sh", "<C-w>h", { desc = "Split horizontally" })
+vim.keymap.set("n", "<leader>sh", "<C-w>s", { desc = "Split horizontally" })
 vim.keymap.set("n", "<leader>se", "<C-w>=", { desc = "Make splits equal" })
 vim.keymap.set("n", "<leader>sx", "<cmd>close<CR>", { desc = "Close active split" })
 
