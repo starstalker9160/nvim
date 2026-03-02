@@ -14,7 +14,7 @@ vim.keymap.set({"n", "v"}, "<leader>y", [["+y]], { desc = "Yank into clipboard" 
 vim.keymap.set("n", "<leader>qc", ":q<CR>", { desc = "Quit current pane" })
 vim.keymap.set("n", "<leader>qa", ":qa<CR>", { desc = "Quit nvim (close all panes)" })
 vim.keymap.set("n", "<leader>qw", ":wq<CR>", { desc = "Write and quit" })
-vim.keymap.set("n", "<leader>qq", ":q!<CR>", { desc = "Exit without saving (get me out of here)" })
+vim.keymap.set("n", "<leader>qq", ":qa!<CR>", { desc = "Exit without saving (get me out of here)" })
 
 -- split windows stuff
 vim.keymap.set("n", "<leader>sv", "<C-w>v", { desc = "Split vertically" })
