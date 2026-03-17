@@ -1,9 +1,5 @@
 vim.g.mapleader = " "
 
--- number stuff
-vim.keymap.set("n", "<leader>+", "<C-a>", { desc = "Increment number" })
-vim.keymap.set("n", "<leader>-", "<C-x>", { desc = "Decrement number" })
-
 -- search clearing
 vim.keymap.set("n", "<leader>nh", ":nohl<CR>", { desc = "Clear search highlights" })
 
@@ -32,3 +28,5 @@ vim.keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current bu
 -- tab stuff (indentation this time)
 vim.keymap.set("v", "<Tab>", ">", { desc = "Indent selection" })
 vim.keymap.set("v", "<S-Tab>", "<", { desc = "Unindent selection" })
+
+-- NOTE: second-brain + obsidian stuff is in core/workflow.lua
