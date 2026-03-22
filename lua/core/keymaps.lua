@@ -25,8 +25,4 @@ vim.keymap.set("n", "<leader>tn", "<cmd>tabn<CR>", { desc = "Go to next tab (rig
 vim.keymap.set("n", "<leader>tp", "<cmd>tabp<CR>", { desc = "Go to previous tab (left)"})
 vim.keymap.set("n", "<leader>tf", "<cmd>tabnew %<CR>", { desc = "Open current buffer in new tab"})
 
--- tab stuff (indentation this time)
-vim.keymap.set("v", "<Tab>", ">", { desc = "Indent selection" })
-vim.keymap.set("v", "<S-Tab>", "<", { desc = "Unindent selection" })
-
 -- NOTE: second-brain + obsidian stuff is in core/workflow.lua
